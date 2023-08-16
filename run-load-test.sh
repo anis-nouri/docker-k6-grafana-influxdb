@@ -1,4 +1,4 @@
-docker-compose up -d influxdb grafana
+docker-compose up -d prometheus grafana
 echo "--------------------------------------------------------------------------------------"
 echo "Load testing with Grafana dashboard http://localhost:3000/d/k6/k6-load-testing-results"
 echo "--------------------------------------------------------------------------------------"

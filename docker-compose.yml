@@ -3,19 +3,21 @@ version: '3.4'
 networks:
   k6:
   grafana:
+  prometheus:
 
 services:
-  influxdb:
-    image: influxdb:1.8
-#    entrypoint: /bin/sh
-#    user: root
+  prometheus:
+    image: prom/prometheus:v2.45.0
+    command:
+      - --web.enable-remote-write-receiver
+      - --enable-feature=native-histograms
+      - --config.file=/etc/prometheus/prometheus.yml
     networks:
       - k6
       - grafana
+      - prometheus
     ports:
-      - "8086:8086"
-    environment:
-      - INFLUXDB_DB=k6
+      - "9090:9090"
 
   grafana:
     image: grafana/grafana:8.5.21
@@ -44,6 +46,10 @@ services:
     ports:
       - "6565:6565"
     environment:
-      - K6_OUT=influxdb=http://influxdb:8086/k6
+      - K6_PROMETHEUS_RW_SERVER_URL=http://prometheus:9090/api/v1/write
+      - K6_PROMETHEUS_RW_TREND_AS_NATIVE_HISTOGRAM=true
+      - K6_OUT=experimental-prometheus-rw
+    depends_on:
+      - prometheus
     volumes:
       - ./scripts:/scripts
