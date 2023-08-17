@@ -1,5 +1,6 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
     stages: [
@@ -14,8 +15,8 @@ export const options = {
 
 
 // Define URLs for Server-side Rendered (SSR) and Client-side Rendered (CSR) tests
-const ssrUrl = 'https://main.dpihydfsjdg2q.amplifyapp.com/prediction/test';
-const csrUrl = 'https://main.dpihydfsjdg2q.amplifyapp.com/';
+const ssrUrl = 'https://main.d2botgf93klw9i.amplifyapp.com/prediction/test';
+const csrUrl = 'https://main.d2botgf93klw9i.amplifyapp.com/';
 
 
 export default () => {
