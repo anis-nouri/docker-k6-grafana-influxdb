@@ -8,6 +8,7 @@ networks:
 services:
   prometheus:
     image: prom/prometheus:v2.45.0
+    user: root
     command:
       - --web.enable-remote-write-receiver
       - --enable-feature=native-histograms
@@ -18,6 +19,8 @@ services:
       - prometheus
     ports:
       - "9090:9090"
+    volumes:
+      - ./prometheus_data:/prometheus
 
   grafana:
     image: grafana/grafana:8.5.21
@@ -40,7 +43,7 @@ services:
   k6:
     image: loadimpact/k6:latest
 #    entrypoint: /bin/sh
-#    user: root
+    user: root
     networks:
       - k6
     ports:
@@ -53,3 +56,4 @@ services:
       - prometheus
     volumes:
       - ./scripts:/scripts
+      - ./k6-summary:/summary
