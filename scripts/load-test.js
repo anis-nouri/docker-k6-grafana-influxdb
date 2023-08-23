@@ -15,8 +15,8 @@ export const options = {
 
 
 // Define URLs for Server-side Rendered (SSR) and Client-side Rendered (CSR) tests
-const ssrUrl = 'https://main.d2botgf93klw9i.amplifyapp.com/prediction/test';
-const csrUrl = 'https://main.d2botgf93klw9i.amplifyapp.com/';
+const ssrUrl = 'https://5qtpyzhmup.eu-west-1.awsapprunner.com/prediction/test';
+const csrUrl = 'https://5qtpyzhmup.eu-west-1.awsapprunner.com/';
 
 
 export default () => {
@@ -39,8 +39,8 @@ export default () => {
  
   export function handleSummary(data) {
     return {
-      "/summary/load_summary.html": htmlReport(data),
-      '/summary/load_summary.json': JSON.stringify(data),
+      "/summary/load_summary_apprunner.html": htmlReport(data),
+      '/summary/load_summary_apprunner.json': JSON.stringify(data),
     };
   }  
   

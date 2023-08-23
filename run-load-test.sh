@@ -11,8 +11,6 @@ echo "--------------------------------------------------------------------------
 # Define an array of test scripts
 test_scripts=(
   "load-test.js"
-  "spike-test.js"
-  "stress-test.js"
 )
 
 # Run each test script
