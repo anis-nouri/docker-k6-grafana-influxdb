@@ -15,8 +15,8 @@ export const options = {
 
 
 // Define URLs for Server-side Rendered (SSR) and Client-side Rendered (CSR) tests
-const ssrUrl = 'https://5qtpyzhmup.eu-west-1.awsapprunner.com/prediction/test';
-const csrUrl = 'https://5qtpyzhmup.eu-west-1.awsapprunner.com/';
+const ssrUrl = 'https://2lr7sgyzh6kukks7wd64o5n53i0fcwxf.lambda-url.eu-west-1.on.aws/prediction/test';
+const csrUrl = 'https://2lr7sgyzh6kukks7wd64o5n53i0fcwxf.lambda-url.eu-west-1.on.aws/';
 
 
 export default () => {
@@ -39,8 +39,8 @@ export default () => {
  
   export function handleSummary(data) {
     return {
-      "/summary/load_summary_apprunner.html": htmlReport(data),
-      '/summary/load_summary_apprunner.json': JSON.stringify(data),
+      "/summary/load_summary_lambda.html": htmlReport(data),
+      '/summary/load_summary_lambda.json': JSON.stringify(data),
     };
   }  
   
