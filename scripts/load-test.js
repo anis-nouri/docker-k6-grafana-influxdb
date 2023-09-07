@@ -15,13 +15,13 @@ export const options = {
 
 
 // Define URLs for Server-side Rendered (SSR) and Client-side Rendered (CSR) tests
-const ssrUrl = 'https://2lr7sgyzh6kukks7wd64o5n53i0fcwxf.lambda-url.eu-west-1.on.aws/prediction/test';
-const csrUrl = 'https://2lr7sgyzh6kukks7wd64o5n53i0fcwxf.lambda-url.eu-west-1.on.aws/';
+const ssrUrl = 'https://d2jjflos3muuse.cloudfront.net/prediction/test';
+const csrUrl = 'https://d2jjflos3muuse.cloudfront.net/';
 
 
 export default () => {
     // Test Server-side Rendered URL
-    const ssrRes = http.get(ssrUrl);
+    const ssrRes = http.get(ssrUrl)
     check(ssrRes, {
       'Server-side Rendered - status is 200': (r) => r.status === 200,
       'Server-side Rendered - correct content': (r) => r.body.includes('Personal Info'),

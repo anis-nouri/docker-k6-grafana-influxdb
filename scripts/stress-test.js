@@ -21,8 +21,8 @@ export const options = {
 
 
 // Define URLs for Server-side Rendered (SSR) and Client-side Rendered (CSR) tests
-const ssrUrl = 'https://main.d2botgf93klw9i.amplifyapp.com/prediction/test';
-const csrUrl = 'https://main.d2botgf93klw9i.amplifyapp.com/';
+const ssrUrl = 'https://d2jjflos3muuse.cloudfront.net/prediction/test';
+const csrUrl = 'https://d2jjflos3muuse.cloudfront.net/';
 
 
 export default () => {
