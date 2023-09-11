@@ -21,8 +21,8 @@ export const options = {
 
 
 // Define URLs for Server-side Rendered (SSR) and Client-side Rendered (CSR) tests
-const ssrUrl = 'https://d2jjflos3muuse.cloudfront.net/prediction/test';
-const csrUrl = 'https://d2jjflos3muuse.cloudfront.net/';
+const ssrUrl = 'https://d1ihgwtuo3q38g.cloudfront.net/prediction/test';
+const csrUrl = 'https://d1ihgwtuo3q38g.cloudfront.net/';
 
 
 export default () => {
