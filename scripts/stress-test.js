@@ -21,8 +21,8 @@ export const options = {
 
 
 // Define URLs for Server-side Rendered (SSR) and Client-side Rendered (CSR) tests
-const ssrUrl = 'https://d1ihgwtuo3q38g.cloudfront.net/prediction/test';
-const csrUrl = 'https://d1ihgwtuo3q38g.cloudfront.net/';
+const ssrUrl = 'reserch-alb-dev-489525147.eu-west-1.elb.amazonaws.com/prediction/test';
+const csrUrl = 'reserch-alb-dev-489525147.eu-west-1.elb.amazonaws.com/';
 
 
 export default () => {

@@ -10,7 +10,7 @@ echo "--------------------------------------------------------------------------
 
 # Define an array of test scripts
 test_scripts=(
-  "spike-test.js"
+  "load-test.js"
 )
 
 # Run each test script
